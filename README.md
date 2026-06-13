@@ -127,9 +127,6 @@ PII_Back/
 
 ## Architecture Docker
 
-Le `Dockerfile` utilise un **build multi-stage** :
-1. **Stage `build`** : compilation Maven avec `eclipse-temurin:21` → génère le `.jar`
-2. **Stage final** : image légère `eclipse-temurin:21-jre-alpine` → exécute le `.jar`
 
 Le `docker-compose.yml` orchestre deux services :
 - `postgres` : base de données avec health check intégré
